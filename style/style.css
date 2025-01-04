@@ -1,0 +1,119 @@
+:root {
+    --bg-pink: #f8eeff;
+    --bg-card: #ffffff;
+    --dark-purple: #301534;
+    --pala-purple: #8b6990;
+    --padding: 4rem;
+}
+
+@font-face {
+    font-family: "WorkBold";
+    src: url("../assets/fonts/static/WorkSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: "WorkRegular";
+    src: url("../assets/fonts/static/WorkSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "WorkSemi";
+    src: url("../assets/fonts/static/WorkSans-SemiBold.ttf");
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    background-color: var(--bg-pink);
+}
+
+.container {
+    background-image: url(../assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: unset;
+    background-size: 100%;
+    height: 23rem;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .container {
+        background-image: url(../assets/images/background-pattern-desktop.svg);
+        height: 32rem;
+    }
+}
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 32.7rem;
+    height: 52.7rem;
+    background-color: var(--bg-card);
+    border-radius: 0.8rem;
+    margin-top: 14.2rem;
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 60rem;
+        height: 56.5rem;
+        margin-top: 9rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        margin-top: 14.2rem;
+    }
+}
+
+/* Header */
+.card__header {
+    padding: 2.4rem;
+}
+
+.card__title {
+    font-family: "WorkBold";
+    font-size: 3.2rem;
+    color: var(--dark-purple);
+    text-align: left;
+    position: absolute;
+    padding-left: 4rem;
+}
+
+.card__title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: url("../assets/images/icon-star.svg");
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    width: 8rem;
+    height: 4rem;
+}
