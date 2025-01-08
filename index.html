@@ -1,35 +1,68 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- displays site properly based on user's device -->
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/images/favicon-32x32.png"
-        />
-        <title>Frontend Mentor | FAQ accordion</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./style/normalize.css" />
-        <link rel="stylesheet" href="./style/style.css" />
-    </head>
 
-    <body>
-        <div class="container">
-            <div class="card__container">
-                <div class="card">
-                    <div class="card__header">
-                        <h1 class="card__title">FAQs</h1>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <title>Frontend Mentor | FAQ accordion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style/normalize.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="card__container">
+            <div class="card">
+                <!-- HEADER -->
+                <div class="card__header">
+                    <h1 class="card__title">FAQs</h1>
+                </div>
+                <!-- ACCORDION QUESTIONS -->
+                <div class="accordion">
+                    <!-- ITEM 1 -->
+                    <div class="accordions-item">
+                        <!--! QUESTION -->
+                        <div class="accordion-question" aria-expanded="false">
+                            <h2 class="question-title">What is Frontend Mentor, and how will it help me?</h2>
+                            <img src="./assets/images/icon-minus.svg" alt="icono minus" class="icon-toggle">
+                        </div>
+                        <!--! ANSWER -->
+                        <div class="accordion-answer" aria-hidden="true">
+                            <p>
+                                Frontend Mentor offers realistic coding challenges to help developers improve their
+                                frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+                                all levels and ideal for portfolio building.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- ITEM 2 -->
+                    <div class="accordions-item">
+                        <!--! QUESTION -->
+                        <div class="accordion-question" aria-expanded="false">
+                            <h2 class="question-title">Is Frontend Mentor free?</h2>
+                            <img src="./assets/images/icon-plus.svg" alt="icono minus" class="icon-toggle">
+                        </div>
+                        <!--! ANSWER -->
+                        <div class="accordion-answer" aria-hidden="true">
+                            <p>
+                                Yes, Frontend Mentor offers both free and premium coding challenges, with the free
+                                option providing access to a range of projects suitable for all skill levels.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+
+
+    <script src="./JS/app.js"></script>
+</body>
+
 </html>
