@@ -153,6 +153,12 @@ body {
     font-family: "WorkSemi";
     font-size: 1.8rem;
     text-align: left;
+    cursor: pointer;
+}
+
+.question-title:hover{
+    color: #AD28EB;
+    transition: color 0.3s;
 }
 
 .accordion-answer {
