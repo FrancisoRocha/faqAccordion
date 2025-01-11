@@ -71,7 +71,7 @@ body {
 
 .card {
     width: 32.7rem;
-    height: 52.7rem;
+    height: 60rem;
     background-color: var(--bg-card);
     border-radius: 0.8rem;
     margin-top: 14.2rem;
@@ -161,17 +161,24 @@ body {
     text-align: left;
     line-height: 150%;
     color: var(--pala-purple);
+    max-height: 0; /* Altura inicial oculta */
+    overflow: hidden; /* Oculta contenido que exceda el contenedor */
+    opacity: 0; /* Para una animación suave */
+    transition: max-height 0.4s ease, opacity 0.4s ease; /* Transiciones */
 }
 
-.accordion-answer{
-    display: none;
-}
-
+/* Muestra la respuesta activa */
 .accordion-answer.is-active {
-    display: block;
-    /* Muestra la respuesta activa */
+    max-height: 500px; /* Ajusta según el contenido máximo esperado */
+    opacity: 1; /* Muestra el contenido */
 }
 
+/* Ícono inicial (por defecto) */
 .icon-toggle {
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Animación para rotación */
+}
+
+/* Ícono activo (rota 180 grados) */
+.icon-toggle.is-active {
+    transform: rotate(180deg);
 }
